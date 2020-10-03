@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add a relevant page title</title>
+
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Montserrat&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <main class="form">
+        <!-- ***********************  ABOUT / PROFILE  *********************** -->
+        <header>
+            <img src="images/cropped2.jpg" id="face">
+            <div class="content-wrap">
+                <h1>Oliver Kipkemei</h1>
+                <h2>Blockchain developer + Mechatronics Engineer</h2>
+
+                <p>My name is Oliver a student at Dedan kimathi University of Technology currently pursuing BSc Mechtronics engineering. I’m also a self-taught student of Web development. Windows 10 apps and blockchain technology. I’m very passionate on
+                    coding and developing software because the world is changing and technology is taking control of the future i want to be a part of the future developing the future</p>
+                <p>Add another paragraph if needed.</p>
+            </div>
+
+        </header>
+
+        <!-- ********************  PROJECTS / PORTFOLIO  ********************* -->
+        <section class="projects">
+            <div class="content-wrap divider">
+                <h2>Featured Projects</h2>
+                <p>View selected projects below. More information can be found at <a href="https://talaihighschoolkenya.netlify.app/">Talai Highschool Website</a>.</p>
+
+                <!-- Copy the whole <section> block to add more projects. -->
+                <section class="project-item ">
+                    <img src="images/thumbnail-2.jpg" alt="description of image">
+                    <h3>Talai Highschool website</h3>
+
+                    <p>Website to be used in the school</p>
+                    <!--<a href="#" class="btn" target="_blank">View project / case study</a>-->
+
+                </section>
+
+                <!--<section class="project-item">
+                    <img src="images/thumbnail-2.jpg" alt="description of image">
+                    <h3>Project Name</h3>
+
+                    <p>Summary or description of the project and/or your role in it. Add as many paragraphs as you need.</p>
+                    <a href="#" class="btn" target="_blank">View project / case study</a>
+
+        </section>-->
+                <!-- End of Project block. -->
+            </div>
+        </section>
+
+        <!-- ***********************  WORK EXPERIENCE  *********************** -->
+        <section class="workexperience">
+            <div class="content-wrap items-details divider">
+                <h2>Work Experience</h2>
+                <!---<p>Optional paragraph for work experience summary. Not a part of the job details. Delete if not being used.</p>
+                -->
+                <!-- Copy this whole <section> block to add more jobs. -->
+                <section class="job-item">
+                    <div class="job-details ">
+                        <h3>Student</h3>
+                        <p>Dedan Kimathi Univesity</p>
+                        <p>May 2018-date</p>
+                    </div>
+                    <!--<div class="job-summary">
+                        <p>Job summary goes here. Add as many paragraphs as you need.</p>
+                        <p>Optional list:</p>
+                        <ul>
+                            <li>Delete this list if you don't need it.</li>
+                            <li>Created...</li>
+                            <li>Lead...</li>
+                            <li>Responsible for...</li>
+                        </ul>
+                    </div>-->
+
+                </section>
+
+                <section class="job-item">
+                    <div class="job-details">
+                        <h3>Microsoft Learn Student Ambassador</h3>
+                        <p>Microsoft</p>
+                        <p>January</p>
+                    </div>
+                    <!--<div class="job-summary">
+                        <p>Job summary goes here. Add as many paragraphs as you need.</p>
+                        <p>Optional list:</p>
+                        <ul>
+                            <li>Delete this list if you don't need it.</li>
+                            <li>Created...</li>
+                            <li>Lead...</li>
+                            <li>Responsible for...</li>
+                        </ul>
+                    </div>-->
+
+                </section>
+            </div>
+
+            <!-- End of Job block. -->
+        </section>
+
+        <!-- ******************  EDUCATION & CERTIFICATIONS ****************** -->
+        <section class="education">
+            <div class="content-wrap item-details">
+                <h2>Education</h2>
+
+                <!-- Copy this whole <section> block to add more schools. -->
+                <section class="edclass">
+                    <h3>Dedan Kimathi University</h3>
+                    <p>Bachelor of Science Mechatronics Engineering 2018-2023</p>
+                    <!--<p>Summary or accomplishments.</p>-->
+                </section>
+                <section class="edclass">
+                    <h3>Kabarnet High School</h3>
+                    <p>High School Session 2014-2017</p>
+                    <!--<p>Summary or accomplishments.</p>-->
+                </section>
+                <!-- End of School block. -->
+            </div>
+
+        </section>
+
+        <!-- *****************  CONTACT INFO / SOCIAL MEDIA  ***************** -->
+        <footer>
+            <div class="content-wrap items-details">
+                <h2>Let's Keep in Touch!</h2>
+
+                <!-- Social media and contact links. Add or remove any networks. -->
+                <ul class="contact-list">
+                    <li><a href="oliverkipkemei2000@outlook.com">oliverkipkemei2000@outlook.com</a></li>
+                    <!--<li><a href="https://sokoSupermaketKabarnet.co.ke" target="_blank">website</a></li>-->
+                    <li><a href="https://www.linkedin.com/in/oliver-kipkemei-1851801b5/" target="_blank">LinkedIn</a></li>
+                    <!--<li><a href="https://facebook.com/SokoSupermarketKabarnet/ ">Facebook </a></li>-->
+                </ul>
+
+                <button id="mybutton" onclick="printFunction()">Print</button>
+            </div>
+        </footer>
+    </main>
+</body>
+<script>
+    function printFunction() {
+        const filename = 'ThisIsYourPDFFilename.pdf';
+
+        html2canvas(document.querySelector('#nodeToRenderAsPDF')).then(canvas => {
+            let pdf = new jsPDF('p', 'mm', 'a4');
+            pdf.addImage(canvas.toDataURL('image/png'), 'PNG', 0, 0, 211, 298);
+            pdf.save(filename);
+        });
+    }
+</script>
+
+</html>
